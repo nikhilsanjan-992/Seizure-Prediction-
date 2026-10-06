@@ -1,0 +1,29 @@
+{
+  "22": {
+    "configuration": "22",
+    "channels": 22,
+    "tn": 0,
+    "fp": 17,
+    "fn": 0,
+    "tp": 18,
+    "note": "Observed classifier errors on the untouched test set; no clinical interpretation is claimed."
+  },
+  "5": {
+    "configuration": "5",
+    "channels": 5,
+    "tn": 0,
+    "fp": 17,
+    "fn": 0,
+    "tp": 18,
+    "note": "Observed classifier errors on the untouched test set; no clinical interpretation is claimed."
+  },
+  "4": {
+    "configuration": "4",
+    "channels": 4,
+    "tn": 0,
+    "fp": 17,
+    "fn": 0,
+    "tp": 18,
+    "note": "Observed classifier errors on the untouched test set; no clinical interpretation is claimed."
+  }
+}

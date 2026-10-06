@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment (never commit real .env)
+.env
+.env.local

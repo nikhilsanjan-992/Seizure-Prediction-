@@ -1,0 +1,91 @@
+{
+  "dataset": {
+    "edf_files": [
+      "D:\\NeuroLite-main\\data\\raw\\chb01_01.edf",
+      "D:\\NeuroLite-main\\data\\raw\\chb02_01.edf",
+      "D:\\NeuroLite-main\\data\\raw\\chb03_01.edf",
+      "D:\\NeuroLite-main\\data\\raw\\sample_eeg.edf"
+    ],
+    "split_method": "file-level split (subject id not inferable from file names; subject independence cannot be guaranteed)",
+    "train_recordings": [
+      "D:\\NeuroLite-main\\data\\raw\\chb01_01.edf",
+      "D:\\NeuroLite-main\\data\\raw\\chb02_01.edf"
+    ],
+    "val_recordings": [
+      "D:\\NeuroLite-main\\data\\raw\\chb03_01.edf"
+    ],
+    "test_recordings": [
+      "D:\\NeuroLite-main\\data\\raw\\sample_eeg.edf"
+    ]
+  },
+  "montages": {
+    "22": {
+      "channels": [
+        "FP1",
+        "FP2",
+        "F3",
+        "F4",
+        "C3",
+        "C4",
+        "P3",
+        "P4",
+        "O1",
+        "O2",
+        "F7",
+        "F8",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "FZ",
+        "CZ",
+        "PZ",
+        "FPZ",
+        "A1",
+        "A2"
+      ],
+      "source": "structural common montage across compatible recordings"
+    },
+    "5": {
+      "channels": [
+        "CZ",
+        "P3",
+        "P4",
+        "T4",
+        "F4"
+      ],
+      "source": "Phase 4 selected_channels.json top_5 (training data only)"
+    },
+    "4": {
+      "channels": [
+        "CZ",
+        "P3",
+        "P4",
+        "T4"
+      ],
+      "source": "Phase 4 selected_channels.json top_4 (training data only)"
+    }
+  },
+  "preprocessing": {
+    "low_freq_hz": 0.5,
+    "high_freq_hz": 40.0,
+    "notch_hz": 50.0,
+    "normalization": "per-channel z-score (training statistics only)",
+    "window_seconds": 10.0,
+    "overlap_seconds": 5.0
+  },
+  "training": {
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "epochs_limit": 3,
+    "batch_size": 8,
+    "loss": "binary_crossentropy",
+    "callbacks": "EarlyStopping(patience=3, restore_best_weights=True) + ModelCheckpoint(best)",
+    "class_weights": "balanced, computed from training labels only",
+    "seed": 42
+  },
+  "classification_threshold": 0.5,
+  "random_seed": 42,
+  "architecture": "shared CNN-BiLSTM: Conv1D(32,k5)->BN->ReLU->MaxPool->Conv1D(64,k3)->BN->ReLU->BiLSTM(32)->Dropout->Dense(1,sigmoid)",
+  "data_variable": "only real EDF annotations; unlabeled windows excluded"
+}

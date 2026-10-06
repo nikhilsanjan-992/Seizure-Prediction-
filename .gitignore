@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.log
+*.pot
+*.pyc
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Node / Frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data / large files
+*.edf
+*.h5
+*.hdf5
+*.pkl
+*.npy
+*.npz
+data/raw/
+data/processed/
+
+# Model weights
+*.pt
+*.pth
+*.ckpt
+*.bin

@@ -1,0 +1,11 @@
+mne
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+tensorflow
+fastapi
+uvicorn
+python-multipart
+python-dotenv

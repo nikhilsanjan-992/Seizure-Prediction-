@@ -1,0 +1,47 @@
+{
+  "top_5": [
+    "CZ",
+    "P3",
+    "P4",
+    "T4",
+    "F4"
+  ],
+  "top_4": [
+    "CZ",
+    "P3",
+    "P4",
+    "T4"
+  ],
+  "method": "Mean ANOVA F-statistic of per-channel features (seizure vs background training windows), channel score normalized to [0, 1] by the largest channel's mean F.",
+  "candidate_channels": [
+    "CZ",
+    "P3",
+    "P4",
+    "T4",
+    "F4",
+    "F7",
+    "PZ",
+    "O1",
+    "FP2",
+    "FPZ",
+    "FP1",
+    "A1",
+    "FZ",
+    "O2",
+    "C3",
+    "T3",
+    "T6",
+    "F8",
+    "C4",
+    "A2",
+    "T5",
+    "F3"
+  ],
+  "random_seed": 42,
+  "training_recordings": 3,
+  "training_segments": 105,
+  "seizure_windows": 54,
+  "background_windows": 51,
+  "split": "file-level split (subject id not inferable; subject independence cannot be guaranteed)",
+  "max_channel_mean_f": 2.282634318851046
+}

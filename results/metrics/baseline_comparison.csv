@@ -1,0 +1,7 @@
+configuration,channels,model,accuracy,precision,recall,specificity,f1,roc_auc,test_samples,note
+22,22,CNN-BiLSTM,0.5143,0.5143,1.0000,0.0000,0.6792,0.9248,35,Phase 6 result (as reported in comparison.csv)
+5,5,CNN-BiLSTM,0.5143,0.5143,1.0000,0.0000,0.6792,0.6013,35,Phase 6 result (as reported in comparison.csv)
+4,4,CNN-BiLSTM,0.5143,0.5143,1.0000,0.0000,0.6792,0.5719,35,Phase 6 result (as reported in comparison.csv)
+22,22,RandomForest,0.4571,0.4737,0.5000,0.4118,0.4865,0.2614,35,"RF on per-window summary statistics (mean/std/RMS/peak-peak per channel), same split/normalization/windows as CNN-BiLSTM"
+5,5,RandomForest,0.3714,0.4000,0.4444,0.2941,0.4211,0.3856,35,"RF on per-window summary statistics (mean/std/RMS/peak-peak per channel), same split/normalization/windows as CNN-BiLSTM"
+4,4,RandomForest,0.4286,0.4444,0.4444,0.4118,0.4444,0.3382,35,"RF on per-window summary statistics (mean/std/RMS/peak-peak per channel), same split/normalization/windows as CNN-BiLSTM"

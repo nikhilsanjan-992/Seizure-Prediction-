@@ -1,0 +1,41 @@
+{
+  "train_test_subject_overlap": {
+    "status": "NOT_VERIFIABLE",
+    "reason": "subject id not inferable from every split file name; subject independence cannot be verified from artifacts"
+  },
+  "train_test_recording_overlap": {
+    "train_val_overlap": [],
+    "train_test_overlap": [],
+    "val_test_overlap": [],
+    "train_val_overlap_count": 0,
+    "train_test_overlap_count": 0,
+    "val_test_overlap_count": 0,
+    "status": "PASS"
+  },
+  "segment_overlap": {
+    "status": "NOT_VERIFIABLE",
+    "reason": "per-window segment arrays are not persisted; overlapping segments between splits cannot be detected from artifacts"
+  },
+  "electrode_selection_test_leakage": {
+    "status": "PASS",
+    "basis": "Phase 4 selection ranked electrodes from the training split only (code audit); stored top_5/top_4 cross-checked against the Phase 6 montage lists"
+  },
+  "normalization_test_leakage": {
+    "status": "PASS_BY_DESIGN",
+    "basis": "per-channel z-score statistics computed by dataset.compute_training_stats() on the training recordings only, then applied to validation/test (code audit)"
+  },
+  "threshold_test_leakage": {
+    "status": "PASS_BY_DESIGN",
+    "basis": "classification threshold fixed at the constant evaluate.DEFAULT_THRESHOLD = 0.5; never tuned on any split (code audit)"
+  },
+  "class_weight_leakage": {
+    "status": "PASS_BY_DESIGN",
+    "basis": "balanced class weights computed by train.compute_class_weights() from training labels only (code audit)"
+  },
+  "split_recordings_available": {
+    "available": true,
+    "n_train": 2,
+    "n_val": 1,
+    "n_test": 1
+  }
+}

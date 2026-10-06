@@ -1,0 +1,62 @@
+{
+  "22": {
+    "configuration": "22",
+    "tn": 0,
+    "fp": 17,
+    "fn": 0,
+    "tp": 18,
+    "total_errors": 17,
+    "error_rate": 0.4857142857142857,
+    "class_specific_errors": {
+      "false_positives": {
+        "count": 17,
+        "class": "background predicted as seizure"
+      },
+      "false_negatives": {
+        "count": 0,
+        "class": "seizure predicted as background"
+      }
+    },
+    "note": "Observed classifier errors on the untouched test set; no clinical interpretation is claimed."
+  },
+  "5": {
+    "configuration": "5",
+    "tn": 0,
+    "fp": 17,
+    "fn": 0,
+    "tp": 18,
+    "total_errors": 17,
+    "error_rate": 0.4857142857142857,
+    "class_specific_errors": {
+      "false_positives": {
+        "count": 17,
+        "class": "background predicted as seizure"
+      },
+      "false_negatives": {
+        "count": 0,
+        "class": "seizure predicted as background"
+      }
+    },
+    "note": "Observed classifier errors on the untouched test set; no clinical interpretation is claimed."
+  },
+  "4": {
+    "configuration": "4",
+    "tn": 0,
+    "fp": 17,
+    "fn": 0,
+    "tp": 18,
+    "total_errors": 17,
+    "error_rate": 0.4857142857142857,
+    "class_specific_errors": {
+      "false_positives": {
+        "count": 17,
+        "class": "background predicted as seizure"
+      },
+      "false_negatives": {
+        "count": 0,
+        "class": "seizure predicted as background"
+      }
+    },
+    "note": "Observed classifier errors on the untouched test set; no clinical interpretation is claimed."
+  }
+}
