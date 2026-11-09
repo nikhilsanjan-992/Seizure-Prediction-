@@ -1,36 +1,35 @@
-/* NeuroSelect — Futuristic Neuroscience Dark Glassmorphism Design System */
+/* NeuroSelect — Warm Light / Cream Neuroscience Dashboard Theme */
 
-:root {
-  /* Color Palette: Cybernetic Neuroscience */
-  --bg-deep: #080c14;
-  --bg-surface: #0e1526;
-  --bg-glass: rgba(15, 23, 42, 0.75);
-  --bg-glass-hover: rgba(26, 38, 64, 0.85);
-  --bg-card: rgba(18, 26, 45, 0.65);
-  
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-bright: rgba(56, 189, 248, 0.3);
-  --border-glow: rgba(139, 92, 246, 0.4);
-  
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
+ :root {
+  /* Warm cream surfaces */
+  --bg-deep: #f7f4ec;
+  --bg-surface: #fffdf7;
+  --bg-glass: rgba(255, 253, 247, 0.94);
+  --bg-glass-hover: #ffffff;
+  --bg-card: #fffefa;
 
-  /* Accents */
-  --accent-cyan: #38bdf8;
-  --accent-cyan-glow: rgba(56, 189, 248, 0.25);
-  --accent-indigo: #8b5cf6;
-  --accent-indigo-glow: rgba(139, 92, 246, 0.25);
-  --accent-blue: #3b82f6;
+  --border-subtle: #e8e1d4;
+  --border-bright: rgba(14, 116, 144, 0.30);
+  --border-glow: rgba(109, 78, 150, 0.22);
 
-  /* Status Colors */
-  --status-online: #10b981;
-  --status-online-glow: rgba(16, 185, 129, 0.3);
-  --status-offline: #f43f5e;
-  --status-offline-glow: rgba(244, 63, 94, 0.3);
-  --status-warning: #f59e0b;
+  --text-main: #263238;
+  --text-muted: #66736f;
+  --text-dim: #87918b;
 
-  /* Fonts */
+  /* Calm clinical accents */
+  --accent-cyan: #087e8b;
+  --accent-cyan-glow: rgba(8, 126, 139, 0.14);
+  --accent-indigo: #75619a;
+  --accent-indigo-glow: rgba(117, 97, 154, 0.14);
+  --accent-blue: #3979a8;
+
+  /* Status colors */
+  --status-online: #16845b;
+  --status-online-glow: rgba(22, 132, 91, 0.18);
+  --status-offline: #c44955;
+  --status-offline-glow: rgba(196, 73, 85, 0.16);
+  --status-warning: #b7791f;
+
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'Fira Code', Consolas, monospace;
@@ -40,9 +39,9 @@
   --radius-lg: 20px;
   --radius-full: 9999px;
 
-  --shadow-main: 0 12px 32px rgba(0, 0, 0, 0.45);
-  --shadow-glow-cyan: 0 0 25px rgba(56, 189, 248, 0.2);
-  --shadow-glow-indigo: 0 0 25px rgba(139, 92, 246, 0.2);
+  --shadow-main: 0 8px 24px rgba(67, 56, 39, 0.08);
+  --shadow-glow-cyan: 0 5px 18px rgba(8, 126, 139, 0.10);
+  --shadow-glow-indigo: 0 5px 18px rgba(117, 97, 154, 0.10);
 }
 
 * {
@@ -142,7 +141,7 @@ body::after {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan) 100%);
+  background: linear-gradient(135deg, #263238 20%, var(--accent-cyan) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -246,7 +245,7 @@ body::after {
 .alert-banner {
   background: rgba(244, 63, 94, 0.12);
   border: 1px solid rgba(244, 63, 94, 0.3);
-  color: #fecdd3;
+  color: #a83243;
   padding: 14px 20px;
   border-radius: var(--radius-md);
   font-size: 14px;
@@ -410,7 +409,7 @@ body::after {
 /* EEG Canvas Preview */
 .eeg-preview-box {
   margin-top: 14px;
-  background: #060911;
+  background: #f1eee5;
   border: 1px solid rgba(56, 189, 248, 0.2);
   border-radius: var(--radius-md);
   padding: 12px;
@@ -485,7 +484,7 @@ body::after {
 }
 
 .config-tile.selected .config-ch-count {
-  color: #c084fc;
+  color: #66518d;
 }
 
 .radio-indicator {
@@ -802,7 +801,7 @@ body::after {
 .electrode-tag {
   background: rgba(139, 92, 246, 0.12);
   border: 1px solid rgba(139, 92, 246, 0.3);
-  color: #c084fc;
+  color: #66518d;
   font-family: var(--font-mono);
   font-size: 12.5px;
   font-weight: 500;
@@ -831,4 +830,75 @@ body::after {
   .channel-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Light-theme refinements for components that previously used dark glass surfaces */
+.navbar {
+  background: rgba(255, 253, 247, 0.96);
+  border-color: var(--border-subtle);
+}
+.status-pill,
+.prediction-badge-box {
+  background: #f3f0e8;
+  border-color: var(--border-subtle);
+}
+.card {
+  background: var(--bg-card);
+  border-color: var(--border-subtle);
+}
+.card:hover {
+  border-color: rgba(8, 126, 139, 0.24);
+}
+.dropzone,
+.config-tile,
+.channel-card {
+  background: #faf8f2;
+}
+.dropzone:hover,
+.dropzone.active {
+  background: #edf6f4;
+}
+.config-tile:hover {
+  background: #f1eee7;
+  border-color: #d5ccbd;
+}
+.config-tile.selected {
+  background: #f0edf6;
+  border-color: var(--accent-indigo);
+}
+.eeg-preview-box {
+  background: #f1eee5;
+  border-color: #d7e5e2;
+}
+.eeg-preview-header {
+  color: #087e8b;
+}
+.prob-bar-track {
+  background: #e9e5dc;
+}
+.metrics-table th {
+  background: #f2efe7;
+}
+.metrics-table tr:hover td {
+  background: #f8f6f0;
+}
+.selected-file-card {
+  background: #edf6f4;
+}
+.alert-banner {
+  background: #fff0ef;
+  border-color: #efc7c5;
+  color: #a83243;
+}
+.electrode-tag {
+  background: #f0edf6;
+  border-color: #d8cfe7;
+  color: #66518d;
+}
+.btn-retry {
+  background: #edf6f4;
+  color: var(--accent-cyan);
+}
+.btn-retry:hover {
+  color: #ffffff;
 }
